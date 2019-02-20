@@ -16,13 +16,22 @@ export class FormDataService {
   //Gets all tasks
   getTasks() {
     return this.http.get<Data[]>(this.base_url + this.tasks_endpoint);
-    // return this.http
-    //   .get(this.base_url + this.tasks_endpoint)
-    //   .pipe(
-    //     map(res => {
-    //       return res.json();
-    //     }
-    //     ));
-  } //getTasks  
+  }
+
+  getTask(id: number) {
+    return this.http.get<Data>(`${this.base_url + this.tasks_endpoint}/${id}`);
+  }
+
+  //Updates a Task
+  updateTask(update: Data) {
+    console.log(update);
+    return this.http
+      .put<Data>(this.base_url + this.tasks_endpoint, update);
+  }
+
+  createTask(newData: Data) {
+    return this.http
+      .post<Data>(this.base_url + this.tasks_endpoint, newData);
+  }
 
 }

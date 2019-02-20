@@ -1,11 +1,2 @@
-<ul>
-  <!-- <li *ngFor="let d of testData">
-    Id: {{ d.id }} <br />
-    name: {{ d.name }} <br />
-    chosenDate: {{ d.chosenDate }} <br />
-    optionSelected: {{ d.optionSelected }} <br />
-  </li> -->
-
-  <app-test-edit *ngFor="let d of testData" [formData]="d"></app-test-edit>
-
-</ul>
+<button type="button" (click)="reloadData()">Reload Data</button>
+<app-test-item *ngFor="let d of testData" [item]="d"></app-test-item>

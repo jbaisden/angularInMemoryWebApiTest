@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Data } from '../data';
 
 @Component({
   selector: 'app-test-item',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestItemComponent implements OnInit {
 
+  @Input() item: Data;
   constructor() { }
 
   ngOnInit() {
+    console.warn("item created:");
+    console.warn(this.item);
   }
 
 }
