@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Data } from '../data';
+import { FormDataService } from '../form-data.service';
 
 @Component({
   selector: 'app-test-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestListComponent implements OnInit {
 
-  constructor() { }
+  testData: Array<Data>;
+  constructor(private formService: FormDataService) { }
 
   ngOnInit() {
+    this.getAllTasks();
   }
+
+  getAllTasks() {
+    this.formService.getTasks().subscribe(data => {
+      this.testData = data;
+    });
+  } //getAllTasks
 
 }

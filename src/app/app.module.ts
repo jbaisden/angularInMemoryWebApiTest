@@ -8,6 +8,7 @@ import { TestListComponent } from './test-list/test-list.component';
 import { TestItemComponent } from './test-item/test-item.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FakeBackendService } from './fake-backend.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,11 @@ import { FakeBackendService } from './fake-backend.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       FakeBackendService, { delay: 0, dataEncapsulation: false }
     )
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

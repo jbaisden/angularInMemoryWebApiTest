@@ -1,3 +1,8 @@
-<p>
-  test-list works!
-</p>
+<ul>
+  <li *ngFor="let d of testData">
+    Id: {{ d.id }} <br />
+    name: {{ d.name }} <br />
+    chosenDate: {{ d.chosenDate }} <br />
+    optionSelected: {{ d.optionSelected }} <br />
+  </li>
+</ul>

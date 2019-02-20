@@ -14,13 +14,13 @@ export class FakeBackendService implements InMemoryDbService {
   constructor() { }
 
   createDb() {
-    return { "thedata": this.dbData }
+    return { "tasks": this.dbData }
   }
 
-  protected responseInterceptor(res: ResponseOptions, ri: RequestInfo): ResponseOptions {
-    res.body = this.dbData;
-    return res;
-  }
+  // protected responseInterceptor(res: ResponseOptions, ri: RequestInfo): ResponseOptions {
+  //   res.body = this.dbData;
+  //   return res;
+  // }
 
 
 }
