@@ -9,13 +9,16 @@ import { TestItemComponent } from './test-item/test-item.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FakeBackendService } from './fake-backend.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TestEditComponent } from './test-edit/test-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestFormComponent,
     TestListComponent,
-    TestItemComponent
+    TestItemComponent,
+    TestEditComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       FakeBackendService, { delay: 0, dataEncapsulation: false }
-    )
+    ),
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent]
 })

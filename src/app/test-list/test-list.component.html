@@ -1,8 +1,11 @@
 <ul>
-  <li *ngFor="let d of testData">
+  <!-- <li *ngFor="let d of testData">
     Id: {{ d.id }} <br />
     name: {{ d.name }} <br />
     chosenDate: {{ d.chosenDate }} <br />
     optionSelected: {{ d.optionSelected }} <br />
-  </li>
+  </li> -->
+
+  <app-test-edit *ngFor="let d of testData" [formData]="d"></app-test-edit>
+
 </ul>

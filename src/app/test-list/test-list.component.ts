@@ -9,15 +9,18 @@ import { FormDataService } from '../form-data.service';
 })
 export class TestListComponent implements OnInit {
 
-  testData: Array<Data>;
+  testData: Array<Data> = new Array();
+
   constructor(private formService: FormDataService) { }
 
   ngOnInit() {
+
     this.getAllTasks();
   }
 
   getAllTasks() {
     this.formService.getTasks().subscribe(data => {
+      console.warn(data);
       this.testData = data;
     });
   } //getAllTasks

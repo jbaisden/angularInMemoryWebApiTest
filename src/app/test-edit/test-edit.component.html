@@ -1,0 +1,9 @@
+<form [formGroup]="testForm" (ngSubmit)="onSubmit()">
+  id:<input type="text" formControlName="id"> <br />
+  name:<input type="text" formControlName="name"> <br />
+  chosenDate:<input type="text" formControlName="chosenDate"> <br />
+  optionSelected: <input type="text" formControlName="optionSelected"> <br />
+  <button type="submit" value="Save">Save</button>
+  <br />
+  <hr><br />
+</form>
