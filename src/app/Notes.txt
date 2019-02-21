@@ -1,0 +1,1 @@
+General Angular observable notes

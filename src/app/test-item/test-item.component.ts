@@ -14,6 +14,7 @@ export class TestItemComponent implements OnInit {
   ngOnInit() {
     console.warn("item created:");
     console.warn(this.item);
+    this.item = (<Data>this.item);
   }
 
 }

@@ -15,6 +15,7 @@ export class FakeBackendService implements InMemoryDbService {
 
   createDb() {
     console.warn("createDb() CALLED");
+    console.warn({ "tasks": this.dbData });
     return { "tasks": this.dbData }
   }
 

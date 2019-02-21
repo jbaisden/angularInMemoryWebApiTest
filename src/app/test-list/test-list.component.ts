@@ -19,10 +19,11 @@ export class TestListComponent implements OnInit {
   }
 
   getAllTasks() {
-    this.formService.getTasks().subscribe(data => {
-      console.warn(data);
-      this.testData = data;
-    });
+    this.formService.getTasks().subscribe(
+      (data: Data[]) => {
+        console.warn(data);
+        this.testData = data;
+      });
   } //getAllTasks
 
 }
