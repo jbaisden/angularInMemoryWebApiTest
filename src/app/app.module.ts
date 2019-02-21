@@ -25,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      FakeBackendService, { delay: 0, dataEncapsulation: false }
+      FakeBackendService, { delay: 0, dataEncapsulation: true }
     ),
     ReactiveFormsModule
   ],

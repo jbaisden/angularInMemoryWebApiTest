@@ -3,6 +3,7 @@ import { map, take } from 'rxjs/operators';
 import 'rxjs/add/operator/map'
 import { HttpClient } from '@angular/common/http';
 import { Data } from './data';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class FormDataService {
   constructor(private http: HttpClient) { }
 
   //Gets all tasks
-  getTasks() {
+  getTasks(): Observable<Data[]> {
     return this.http.get<Data[]>(this.base_url + this.tasks_endpoint);
   }
 
