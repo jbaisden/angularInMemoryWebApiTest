@@ -14,4 +14,5 @@ export class Data {
         this.chosenDate = chosenDate;
         this.optionSelected = optionSelected;
     }
+
 }
